@@ -36,7 +36,7 @@ cd lede
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 make menuconfig
-make -j $(nproc)
+make -j $(nproc) V=s
 ```
 
 After the build, the images will be inside `~/mybuild/lede/bin/target/`.
