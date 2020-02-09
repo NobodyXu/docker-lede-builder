@@ -9,8 +9,8 @@ A smaller container based on Alpine Linux is available in the alpine branch. But
 
 ## Prerequisites
 
-* Has docker/podman installed and fully configured.
-* build Docker image:
+ * Has docker/podman installed and fully configured.
+ * build Docker image:
 
 ```
 git clone https://github.com/mwarning/docker-openwrt-builder.git
@@ -25,6 +25,7 @@ Now the docker image is available. These steps only need to be done once.
 ## Usage
 
 Create a build folder and link it into a new docker container:
+
 ```
 mkdir ~/mybuild
 docker run -v ~/mybuild:/home/user -it lede_builder /bin/bash
@@ -51,7 +52,7 @@ NOTE:
 
 Other, but very similar projects:
 
-* [docker-openwrt-builder](https://github.com/mwarning/docker-openwrt-docker)
-* [docker-openwrt-buildroot](https://github.com/noonien/docker-openwrt-buildroot)
-* [openwrt-docker-toolchain](https://github.com/mchsk/openwrt-docker-toolchain)
+ * [docker-openwrt-builder](https://github.com/mwarning/docker-openwrt-docker)
+ * [docker-openwrt-buildroot](https://github.com/noonien/docker-openwrt-buildroot)
+ * [openwrt-docker-toolchain](https://github.com/mchsk/openwrt-docker-toolchain)
 
