@@ -13,7 +13,7 @@ RUN echo debconf apt-fast/dlflag       boolean true     | debconf-set-selections
 RUN echo debconf apt-fast/aptmanager   string  apt-get  | debconf-set-selections
 
 # Install basic utilities
-RUN apt-fast update && apt-fast install -y sudo time curl wget git subversion ca-certificates
+RUN apt-fast update && apt-fast install -y time curl wget git subversion ca-certificates
 
 # Install build tools
 RUN apt-fast update && \
@@ -34,7 +34,7 @@ RUN apt-key del A2166B8DE8BDC3367D1901C11EE2FF37CA8DA16B
 RUN rm /tmp/* && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Add user as lede cannot be built as root
-RUN useradd -m user && echo 'user ALL=NOPASSWD: ALL' > /etc/sudoers.d/user
+RUN useradd -m user
 
 USER user
 WORKDIR /home/user
