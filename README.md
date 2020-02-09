@@ -18,6 +18,8 @@ cd docker-openwrt-builder
 docker build --squash -t lede_builder .
 ```
 
+`docker` here can be replaced with `podman`.
+
 Now the docker image is available. These steps only need to be done once.
 
 ## Usage
@@ -28,6 +30,8 @@ Create a build folder and link it into a new docker container:
 mkdir ~/mybuild
 docker run -v ~/mybuild:/home/user -it lede_builder /bin/bash
 ```
+
+`docker` here can be replaced with `podman`.
 
 In the container console, enter:
 
