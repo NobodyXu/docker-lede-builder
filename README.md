@@ -15,7 +15,7 @@ A smaller container based on Alpine Linux is available in the alpine branch. But
 ```
 git clone https://github.com/mwarning/docker-openwrt-builder.git
 cd docker-openwrt-builder
-docker build -t lede_builder .
+docker build --squash -t lede_builder .
 ```
 
 Now the docker image is available. These steps only need to be done once.
@@ -36,7 +36,7 @@ cd lede
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 make menuconfig
-make -j4
+make -j $(nproc)
 ```
 
 After the build, the images will be inside `~/mybuild/lede/bin/target/`.
