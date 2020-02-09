@@ -33,7 +33,7 @@ docker run -v ~/mybuild:/home/user -it lede_builder /bin/bash
 In the container console, enter:
 
 ```
-git clone https://github.com/coolsnowwolf/lede
+./update_repository.sh https://github.com/coolsnowwolf/lede lede
 cd lede
 ./scripts/feeds update -a
 ./scripts/feeds install -a
@@ -42,6 +42,10 @@ make -j $(nproc) V=s
 ```
 
 After the build, the images will be inside `~/mybuild/lede/bin/target/`.
+
+NOTE:
+
+`./update_repository.sh https://github.com/coolsnowwolf/lede lede` will be creating a shallow clone of the repository to save time, bandwidth and storage.
 
 ## Other Projects
 
