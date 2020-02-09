@@ -39,8 +39,5 @@ RUN useradd -m user && echo 'user ALL=NOPASSWD: ALL' > /etc/sudoers.d/user
 USER user
 WORKDIR /home/user
 
-# set dummy git config
-RUN git config --global user.name "user" && git config --global user.email "user@example.com"
-
 # Add update_repository.sh for convenient shallow cloning.
 ADD update_repository.sh /home/user
