@@ -27,3 +27,4 @@ ADD build.sh /usr/local/bin/
 
 USER user
 WORKDIR /home/user
+CMD ["/usr/local/bin/build.sh"]
