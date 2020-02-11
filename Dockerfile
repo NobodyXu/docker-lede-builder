@@ -12,7 +12,7 @@ RUN apt-fast update && \
     apt-fast install -y build-essential asciidoc binutils bzip2 gawk gettext libncurses5-dev libz-dev \
                         patch unzip zlib1g-dev lib32gcc1 libc6-dev-i386 flex uglifyjs gcc-multilib p7zip \
                         p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev \
-                        autoconf automake libtool autopoint device-tree-compiler
+                        autoconf automake libtool autopoint device-tree-compiler util-linux
 
 RUN /tmp/remove_apt-fast.sh
 
