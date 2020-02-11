@@ -1,4 +1,4 @@
-# Docker lede Builder, fored from mwarning/docker-openwrt-builder
+# Docker lede Builder, forked from mwarning/docker-openwrt-builder
 
 Build [lede](https://github.com/coolsnowwolf/lede) images in a Docker container. This is sometimes necessary when building lede on the host system fails, e.g. when some dependency is too new, or when your computer use incompatiable toolchains like llvm.
 
