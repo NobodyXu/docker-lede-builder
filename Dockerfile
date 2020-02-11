@@ -22,6 +22,9 @@ RUN rm /tmp/* && apt-get clean && rm -rf /var/lib/apt/lists/*
 # Add user as lede cannot be built as root
 RUN useradd -m user
 
+# Add build.sh for building with ease
+ADD build.sh /usr/local/bin/
+
 USER user
 WORKDIR /home/user
 
