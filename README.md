@@ -27,28 +27,19 @@ Now the docker image is available. These steps only need to be done once.
 Create a build folder and link it into a new docker container:
 
 ```
-mkdir ~/mybuild
-docker run -v ~/mybuild:/home/user -it lede_builder /bin/bash
+mkdir ~/mybuild && cd ~/mybuild
+
+git clone https://github.com/coolsnowwolf/lede
+
+docker run -v ~/mybuild:/home/user -it lede_builder
 ```
 
-`docker` here can be replaced with `podman`.
-
-In the container console, enter:
-
-```
-./update_repository.sh https://github.com/coolsnowwolf/lede lede
-cd lede
-./scripts/feeds update -a
-./scripts/feeds install -a
-make menuconfig
-make -j $(nproc) V=s
-```
-
+Now just wait until the menu (invoked by `make menuconfig`) comes out and pick whatever you like, save and exit, then the compilation will start automatically.
 After the build, the images will be inside `~/mybuild/lede/bin/target/`.
 
-NOTE:
+*NOTE*:
 
-`./update_repository.sh https://github.com/coolsnowwolf/lede lede` will be creating a shallow clone of the repository to save time, bandwidth and storage.
+`docker` here can be replaced with `podman`.
 
 ## Other Projects
 
