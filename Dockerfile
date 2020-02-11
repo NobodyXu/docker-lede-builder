@@ -27,6 +27,3 @@ ADD build.sh /usr/local/bin/
 
 USER user
 WORKDIR /home/user
-
-# Add update_repository.sh for convenient shallow cloning.
-ADD update_repository.sh /home/user
