@@ -31,7 +31,7 @@ mkdir ~/mybuild && cd ~/mybuild
 
 git clone https://github.com/coolsnowwolf/lede
 
-docker run -v ~/mybuild:/home/user -it lede_builder
+docker run -v ~/mybuild:/home/user/lede -it lede_builder
 ```
 
 Now just wait until the menu (invoked by `make menuconfig`) comes out and pick whatever you like, save and exit, then the compilation will start automatically.
